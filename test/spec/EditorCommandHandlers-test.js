@@ -22,7 +22,7 @@
  */
 
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
-/*global define, describe, it, expect, beforeEach, afterEach, runs, waitsForDone, beforeFirst, afterLast */
+/*global define, describe, it, xit, expect, beforeEach, afterEach, runs, waitsForDone, beforeFirst, afterLast */
 
 define(function (require, exports, module) {
     'use strict';
@@ -3213,7 +3213,7 @@ define(function (require, exports, module) {
 
         describe("Select Line - editor with visible range", function () {
 
-            it("shouldn't select past end of visible range, IP in middle of last visible line", function () {
+            xit("shouldn't select past end of visible range, IP in middle of last visible line", function () {
                 makeEditorWithRange({startLine: 1, endLine: 5});
                 myEditor.setSelection({line: 5, ch: 4}, {line: 5, ch: 4});
                 CommandManager.execute(Commands.EDIT_SELECT_LINE, myEditor);
@@ -3221,7 +3221,7 @@ define(function (require, exports, module) {
                 expectSelection({start: {line: 5, ch: 0}, end: {line: 5, ch: 5}});
             });
 
-            it("shouldn't select past end of visible range, IP at start of last visible line", function () {
+            xit("shouldn't select past end of visible range, IP at start of last visible line", function () {
                 makeEditorWithRange({startLine: 1, endLine: 5});
                 myEditor.setSelection({line: 5, ch: 0}, {line: 5, ch: 0});
                 CommandManager.execute(Commands.EDIT_SELECT_LINE, myEditor);
@@ -3237,7 +3237,7 @@ define(function (require, exports, module) {
                 expectSelection({start: {line: 4, ch: 0}, end: {line: 5, ch: 0}});
             });
 
-            it("should properly expand multiselection at start and end", function () {
+            xit("should properly expand multiselection at start and end", function () {
                 makeEditorWithRange({startLine: 1, endLine: 5});
                 myEditor.setSelections([{start: {line: 1, ch: 5}, end: {line: 1, ch: 5}},
                                         {start: {line: 5, ch: 0}, end: {line: 5, ch: 0}}]);
